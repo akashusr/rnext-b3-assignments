@@ -36,7 +36,7 @@ Please follow the below instructions to run different branches of this repositor
 
 2. Clone this repository -
     ```sh
-    git clone https://github.com/akashusr/rnext-batch-3-solutions.git
+    git clone https://github.com/akashusr/rnext-batch-3-assignments.git
     ```
 3. Go to the desired assignment directory
     ```sh
