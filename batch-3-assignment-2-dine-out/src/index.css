@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@plugin "@tailwindcss/typography";
+@plugin "@tailwindcss/forms";
+@plugin "@tailwindcss/aspect-ratio";
+
+@theme {
+  --color-primary: #ff602c;
+  --color-background: #1d1d1d;
+  --color-navbg: rgba(89, 86, 86, 0.29);
+  --color-cardbg: rgba(89, 86, 86, 0.4);
+  --font-inter: "Inter", sans-serif;
+}
+
+/* Removing the styles makes the select to look as same as in the template */
+/* select {
+  appearance: none;
+  accent-color: var(--color-primary);
+  background-color: var(--color-background);
+  min-width: 100px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  padding: 4px;
+} */
+
+.items-container {
+  max-height: 250px;
+  overflow-y: auto;
+}
+
+.reports-container {
+  max-height: 340px;
+  overflow-y: auto;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-navbg);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 96, 44, 0.5);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 96, 44, 0.8);
+}

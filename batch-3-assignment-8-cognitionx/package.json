@@ -1,0 +1,35 @@
+{
+  "name": "cognitionx",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@types/react-syntax-highlighter": "^15.5.13",
+    "bcryptjs": "^3.0.2",
+    "js-cookie": "^3.0.5",
+    "jsonwebtoken": "^9.0.2",
+    "lucide-react": "^0.525.0",
+    "mongoose": "^8.16.4",
+    "multer": "^2.0.2",
+    "natural": "^8.1.0",
+    "next": "14.2.30",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-markdown": "^10.1.0",
+    "react-syntax-highlighter": "^15.6.1",
+    "remark-gfm": "^4.0.1",
+    "uuid": "^11.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^8",
+    "eslint-config-next": "14.2.30",
+    "postcss": "^8",
+    "prettier": "3.6.2",
+    "tailwindcss": "^3.4.1"
+  }
+}

@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+body {
+  font-family: "Instrument Serif", serif;
+}
+
+@view-transition {
+  navigation: auto;
+}
+
+.marquee {
+  text-align: center;
+}
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.news-card {
+  transition:
+    transform 0.2s ease-in-out,
+    box-shadow 0.2s ease-in-out;
+}
+.news-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}

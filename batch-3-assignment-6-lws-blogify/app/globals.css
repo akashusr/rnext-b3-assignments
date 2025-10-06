@@ -1,0 +1,66 @@
+@import "tailwindcss";
+body {
+  font-family: "Satoshi", sans-serif;
+}
+
+.article-content p {
+  margin-bottom: 1.5rem;
+  font-size: 1.125rem;
+  line-height: 1.8;
+}
+
+.article-content h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.article-content h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.article-content ul,
+.article-content ol {
+  margin-bottom: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.article-content ul {
+  list-style-type: disc;
+}
+
+.article-content ol {
+  list-style-type: decimal;
+}
+
+.article-content li {
+  margin-bottom: 0.5rem;
+  font-size: 1.125rem;
+  line-height: 1.8;
+}
+
+.article-content blockquote {
+  border-left: 4px solid #000;
+  padding-left: 1rem;
+  font-style: italic;
+  margin: 1.5rem 0;
+}
+
+.article-content pre {
+  background-color: #f7f7f7;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+}
+
+.article-content code {
+  font-family: monospace;
+  background-color: #f7f7f7;
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.25rem;
+}

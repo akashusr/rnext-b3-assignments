@@ -1,0 +1,44 @@
+[
+  {
+    "id": "a614f152-d87f-57b4-b593-7f2740b120a8",
+    "name": "Lemonade",
+    "price": 150,
+    "slug": "lemonade"
+  },
+  {
+    "id": "d3c0f9b5-4c08-526a-b39b-322dfdbc500a",
+    "name": "Chocolate Brownie",
+    "price": 220,
+    "slug": "brownie"
+  },
+  {
+    "id": "ea7bf80d-ebac-53c8-91d7-4db174b1a4ff",
+    "name": "Papaya Salad",
+    "price": 360,
+    "slug": "salad"
+  },
+  {
+    "id": "b6c1096a-81c3-596e-b305-715443e5b2de",
+    "name": "Hamburger",
+    "price": 350,
+    "slug": "hamburger"
+  },
+  {
+    "id": "ce211ff5-e095-5350-aeb2-615f36edcec3",
+    "name": "Chicken Nuggets",
+    "price": 300,
+    "slug": "chicken"
+  },
+  {
+    "id": "7e0e329f-6b27-53b9-9f25-65504ee7f3f1",
+    "name": "Submarine Sandwich",
+    "price": 550,
+    "slug": "submarine"
+  },
+  {
+    "id": "25058b24-3926-5de4-8fdb-04feb4760b6e",
+    "name": "Pizza slices",
+    "price": 250,
+    "slug": "pizza"
+  }
+]

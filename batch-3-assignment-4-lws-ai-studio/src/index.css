@@ -1,0 +1,157 @@
+@import url("https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap");
+
+@import "tailwindcss";
+
+body {
+  font-family: "Satoshi", sans-serif;
+  background: linear-gradient(135deg, #0f0f0f 0%, #1a0b2e 100%);
+  min-height: 100vh;
+  color: white;
+}
+@layer utilities {
+  @keyframes fade-in-down {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .animate-fade-in-down {
+    animation: fade-in-down 0.2s ease-out;
+  }
+}
+
+/* Custom scrollbar for WebKit browsers (Chrome, Safari) */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #555;
+  border-radius: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: #777;
+}
+
+/* Custom scrollbar for Firefox */
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #555 transparent;
+}
+
+
+
+
+/* Y-axis and general container styles remain the same */
+.stat-card {
+  @apply bg-zinc-900/30 backdrop-blur-sm border border-zinc-700/50 p-6 rounded-2xl shadow-lg flex flex-col;
+}
+.stat-title {
+  @apply text-sm font-medium text-zinc-400 mb-1;
+}
+.stat-value {
+  @apply text-4xl font-bold text-white mb-4;
+}
+.stat-unit {
+  @apply text-lg font-medium text-zinc-400 ml-1;
+}
+.bar-chart-container {
+  @apply mt-auto pt-6 border-t border-zinc-700/50 relative;
+}
+.y-axis {
+  @apply absolute inset-0 flex flex-col justify-between -z-10;
+}
+.y-axis-label {
+  @apply w-full border-t border-dashed border-zinc-700/60 relative;
+}
+.y-axis-label span {
+  @apply absolute -top-2.5 left-0 text-xs text-zinc-500;
+}
+.y-axis-label:last-child {
+  @apply border-transparent;
+}
+
+/* --- NEW ADVANCED BAR CHART STYLES --- */
+
+.bar-chart {
+  @apply list-none p-0 m-0 flex h-48 justify-around items-end gap-3 pl-8;
+}
+
+.bar-item {
+  @apply flex flex-col items-center justify-end h-full w-full relative;
+}
+
+.segmented-bar {
+  @apply w-full rounded-t-md relative cursor-pointer;
+  transform-origin: bottom;
+
+  background: repeating-linear-gradient(
+          to top,
+          #3f3f46,
+          #3f3f46 4px,
+          transparent 4px,
+          transparent 6px
+  );
+
+  height: 100%;
+}
+
+.segmented-bar::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+
+  background-image: linear-gradient(to top, #f472b6, #fb923c); /* Pink-500 to Orange-400 */
+
+  height: var(--value, 0%);
+
+  border-radius: 6px 6px 0 0;
+  transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+  animation: grow-pseudo-bar 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+.segmented-bar:hover::before {
+  filter: brightness(1.2) drop-shadow(0 0 8px rgba(139, 92, 246, 0.5));
+}
+
+.bar-tooltip {
+  @apply absolute bottom-full mb-3 w-max max-w-[120px] bg-zinc-900 text-white text-xs rounded-md shadow-xl p-2 z-10;
+  @apply opacity-0 pointer-events-none transition-all duration-300 transform scale-95;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.segmented-bar:hover .bar-tooltip {
+  @apply opacity-100 scale-100;
+}
+
+.tooltip-label {
+  @apply font-bold block truncate;
+}
+.tooltip-value {
+  @apply text-zinc-300;
+}
+
+.bar-label-bottom {
+  @apply text-xs text-zinc-400 mt-2 text-center w-full break-words;
+}
+
+@keyframes grow-pseudo-bar {
+  from {
+    height: 0%;
+  }
+  to {
+    height: var(--value, 0%);
+  }
+}

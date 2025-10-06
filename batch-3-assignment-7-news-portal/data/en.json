@@ -1,0 +1,26 @@
+{
+  "navLists": [
+    {
+      "id": 0,
+      "name": "World",
+      "path": "/"
+    },
+    {
+      "id": 1,
+      "name": "Business",
+      "path": "/"
+    },
+    {
+      "id": 2,
+      "name": "Lifestyle",
+      "path": "/"
+    }
+  ],
+  "websiteName": "The News Island",
+  "bannerText": "Breaking News → Climate Summit Reaches Historic Agreement. Tech Giants  Announce AI Safety Protocols.Global Markets Show Strong Recovery Signs.",
+  "share": "Share",
+  "bookmark": "Bookmark",
+  "category": "Category ",
+  "comments": "Comments",
+  "discussion ":"Join the discussion"
+}
